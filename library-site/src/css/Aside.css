@@ -1,0 +1,30 @@
+:root {
+    --theme:#377F7F;
+    --text:white;
+    --maintext:black;
+    --background:white;
+    --line:#BBBBBB;
+    --infobackground: rgb(55, 127, 127, 0.74);
+    --expire:red;
+}
+
+#browse-aside {
+    border-right:var(--line) 1px solid;
+}
+
+#browse-nav h4 {
+    border-bottom:var(--line) 1px solid;
+}
+
+#browse-nav li {
+    list-style-type:none;
+}
+
+#browse-nav a {
+    text-decoration:none;
+    color:var(--maintext);
+}
+
+#browse-nav a:hover {
+    background:var(--line);
+}

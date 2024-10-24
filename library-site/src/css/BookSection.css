@@ -1,0 +1,56 @@
+:root {
+    --theme:#377F7F;
+    --text:white;
+    --maintext:black;
+    --background:white;
+    --line:#BBBBBB;
+    --infobackground: rgb(55, 127, 127, 0.74);
+    --expire:red;
+}
+
+#title {
+    text-align:center;
+    color:var(--theme);
+    background:var(--background);
+    border-bottom:var(--line) 1px solid;
+    font-size:25px;
+}
+
+.book-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+
+.book {
+    padding: 20px;
+    text-align: center;
+}
+.book img {
+    width: auto;
+    height: auto;
+}
+
+#book-section {
+    display:block;
+}
+
+#book-section h2 {
+    text-align:center;
+    color:var(--theme);
+}
+
+.book-content {
+    text-decoration:none;
+    color:var(--maintext);
+}
+
+#cite {
+    font-size:8px;
+    margin:0;
+}
+
+.cite {
+    font-size:8px;
+    margin:0;
+}
