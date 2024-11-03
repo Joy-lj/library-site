@@ -1,0 +1,30 @@
+
+#email {
+    margin-top:60px;
+    margin-bottom:60px;
+}
+
+#email-bar {
+    width:70%;
+    height:40px;
+}
+
+#password-bar {
+    width:70%;
+    height:40px;
+}
+
+
+#firstname {
+    margin-bottom:60px;
+}
+
+#firstname-bar {
+    width:70%;
+    height:40px;
+}
+
+#lastname-bar {
+    width:70%;
+    height:40px;
+}

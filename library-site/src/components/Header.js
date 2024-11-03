@@ -1,14 +1,12 @@
+import {Link} from "react-router-dom";
 import "../css/Header.css";
 
 const Header = () => {
+
     return (
         <header>
-            <h2><a id="main-text" href="#">Joy's Online Library</a></h2>
-                <div id="account" class="columns">
-                    <p><a href="#">Account</a></p>
-                </div>
-                <div id="search" class="columns">
-                </div>
+            <h2><Link to="/">Joy's Online Library</Link></h2>
+            <p id="account"><Link to="/library">Account</Link></p>
         </header>
     );
 };

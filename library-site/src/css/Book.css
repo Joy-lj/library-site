@@ -1,0 +1,66 @@
+.left {
+    left:0;
+}
+
+.right {
+    position:absolute;
+    right:0;
+    width:65%;
+    margin:20px;
+}
+
+#book-cover {
+    position:absolute;
+    left:9px;
+}
+
+#book-header {
+    background:var(--theme);
+    border-bottom:var(--line) 1px solid;
+    padding:10px;
+}
+
+#library-button {
+    position:relative;
+    left:95%;
+}
+
+#book-page {
+    text-align:center;
+}
+
+#book-page p {
+    line-height:20px;
+}
+
+#dedication {
+    margin-top:50px;
+    border-top:var(--line) 1px solid;
+    text-align:center;
+    padding:20px;
+}
+
+#dedication h2 {
+    color:var(--maintext);
+}
+
+@media only screen and (max-width:900px) {
+
+    #book {
+        position:relative;
+        display:block;
+    }
+
+    #book-cover {
+        display:none;
+    }
+
+    #book-page {
+        width:auto;
+    }   
+
+    #library-button {
+        position:relative;
+        left:85%;
+    }
+}

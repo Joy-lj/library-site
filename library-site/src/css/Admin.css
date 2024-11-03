@@ -1,0 +1,74 @@
+#main-content {
+    display:flex;
+}
+
+#admin-title {
+    margin-left:10px;
+    padding-left:10px;
+    text-align:center;
+    color:var(--theme);
+    background:var(--background);
+    border-bottom:var(--line) 1px solid;
+    font-size:25px;
+    width:1000px;
+}
+
+#admin-book {
+    margin-left:10px;
+    margin-bottom:10px;
+    display:flex;
+}
+
+#admin-book p {
+    line-height:5px;
+}
+
+#book-buttons {
+    display:flex;
+}
+
+#buttons-div {
+    margin:10px;
+}
+
+#add {
+    margin:10px;
+    width:60px;
+}
+
+#edit {
+    margin:10px;
+    width:60px;
+}
+
+#delete {
+    margin:10px;
+    width:60px;
+}
+
+#user {
+    margin-top:10px;
+}
+
+#admin-users {
+    display:flex;
+}
+
+#admin-users2 {
+    display:flex;
+}
+
+@media only screen and (max-width:900px) {
+
+    #admin-book {
+        display:block;
+    }
+    
+    #admin-users {
+        display:block;
+    }
+
+    #buttons-div {
+        display:block;
+    }
+}

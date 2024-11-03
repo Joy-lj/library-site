@@ -1,0 +1,49 @@
+#about-content {
+    background:var(--background);
+    text-align:center;
+    overflow:hidden;
+
+}
+
+#about-content h1 {
+    color:var(--theme);
+}
+
+#about-title {
+    border-bottom: 1px solid var(--line);
+}
+
+#about-content p {
+    margin:10px;
+}
+
+#about-div {
+    display:flex;
+    margin-top:50px;
+}
+
+#about-div img {
+    height:300px;
+    width:auto;
+    padding-left:10px;
+}
+
+#join {
+    padding-top:50px;
+}
+
+#join a {
+    color:var(--theme);
+}
+
+@media only screen and (max-width:900px) {
+    #about-div {
+        display:block;
+    }
+
+    #about-div img {
+        height:200px;
+        width:auto;
+    }
+    
+}

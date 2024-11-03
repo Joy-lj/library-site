@@ -1,0 +1,40 @@
+#borrow-content {
+    background:var(--theme);
+    width:100%;
+    height:700px;
+}
+
+#borrow-background {
+  background:var(--background);
+  position:absolute;
+  top:10%;
+  left:10%;
+  width:80%;
+  height:80%;
+  padding:20px;
+  text-align:center;
+}
+
+#borrow-background h1 {
+    color:var(--theme);
+    font-size:50px;
+    padding-top:100px;
+}
+
+#viewlibrary {    
+    width:150px;
+    height:40px;
+    margin:20px;
+}
+
+@media only screen and (max-width:900px) {
+
+    #borrow-background {
+        background:var(--background);
+        top:10%;
+        left:5%;
+        width:80%;
+        height:80%;
+        text-align:center;
+    }
+}

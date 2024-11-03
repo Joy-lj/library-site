@@ -1,0 +1,41 @@
+#background-div {
+    background:var(--infobackground);
+    width:90%;
+    margin:50px;
+    padding:20px;
+    display:flex;
+}
+
+#available-books {
+    background:var(--background);
+    width:150px;
+    font-size:12px;
+}
+
+#book-div {
+    text-align:center;
+    margin:30px;
+}
+
+
+@media only screen and (max-width:900px) {
+
+    #background-div {
+        display: block;
+        text-align: center;
+    }
+
+    #book-image {
+        height:300px;
+        width:auto;
+    }
+
+    .book img{
+        height:300px;
+        width:auto;
+    }
+
+    #available-books {
+        margin-left:60px;
+    }
+}

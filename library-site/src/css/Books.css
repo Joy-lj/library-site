@@ -1,0 +1,9 @@
+#cite {
+    font-size:8px;
+    margin:0;
+}
+
+h3 a {
+    text-decoration:none;
+    color:var(--maintext);
+}

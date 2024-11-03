@@ -1,0 +1,21 @@
+#main-content {
+    display:flex;
+}
+
+#title {
+    text-align:center;
+    color:var(--theme);
+    background:var(--background);
+    border-bottom:var(--line) 1px solid;
+    font-size:25px;
+}
+
+#content {
+    display:block;
+    width:100%;
+}
+
+#content h2 {
+    text-align:center;
+    color:var(--theme);
+}

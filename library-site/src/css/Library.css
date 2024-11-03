@@ -1,0 +1,13 @@
+#library-title {
+    text-align:center;
+    color:var(--theme);
+    background:var(--background);
+    border-bottom:1px solid var(--line);
+}
+
+#library-content {
+    display:block;
+    width:100%;
+}
+
+

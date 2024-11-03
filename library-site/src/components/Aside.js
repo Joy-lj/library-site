@@ -1,19 +1,32 @@
+import {Link} from "react-router-dom";
 import "../css/Aside.css";
+import React from 'react';
 
-const Aside = () => {
+
+const Aside = ({ onGenreChange }) => {
+
     return (
-        <aside id="browse-aside" class="one hidden-small-aside">
+        <aside id="browse-aside">
+            <nav id="main-nav">
+                <ul id="nav-items">
+                    <li><Link to="/" onClick={() => onGenreChange("Best of 2024!")}>Home</Link></li>
+                    <li><Link to="/about">About</Link></li>
+                    <li><Link to="/contact">Contact</Link></li>
+                </ul>
+            </nav>
+
             <nav id="browse-nav">
                 <h4>Browse Genres</h4>
-                <ul>
-                    <li><a href="nonfiction.html">Nonfiction</a></li>
-                    <li><a href="fantasy.html">Fantasy</a></li>
-                    <li><a href="horror.html">Horror</a></li>
-                    <li><a href="romance.html">Romance</a></li>
-                    <li><a href="scifi.html">Sci-fi</a></li>
-                </ul>
-                <h4><a href="recent.html">Recently Added</a></h4>
+                    <ul>
+                        <li><Link to="/" onClick={() => onGenreChange("Nonfiction")}>Nonfiction</Link></li>
+                        <li><Link to="/" onClick={() => onGenreChange("Fantasy")}>Fantasy</Link></li>
+                        <li><Link to="/"onClick={() => onGenreChange("Horror")}>Horror</Link></li>
+                        <li><Link to="/" onClick={() => onGenreChange("Romance")}>Romance</Link></li>
+                        <li><Link to="/" onClick={() => onGenreChange("Sci-fi")}>Sci-fi</Link></li>
+                    </ul>
+                <h4><Link to="/" onClick={() => onGenreChange("Recently Added")}>Recently Added</Link></h4>
             </nav>
+            <button><Link to="/login">Login/Sign Up</Link></button>
         </aside>
     );
 };

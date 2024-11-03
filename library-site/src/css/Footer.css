@@ -1,25 +1,4 @@
-:root {
-    --theme:#377F7F;
-    --text:white;
-    --maintext:black;
-    --background:white;
-    --line:#BBBBBB;
-    --infobackground: rgb(55, 127, 127, 0.74);
-    --expire:red;
-}
-
-body {
-    background:var(--text);
-    font-family:Arial, Helvetica, sans-serif;
-}
-
 footer {
-    background:var(--line);
-    display:flex;
-    color:var(--text);
-}
-
-#home-div {
     background:var(--line);
     padding:25px;
 }

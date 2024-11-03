@@ -1,11 +1,31 @@
-:root {
-    --theme:#377F7F;
-    --text:white;
-    --maintext:black;
-    --background:white;
-    --line:#BBBBBB;
-    --infobackground: rgb(55, 127, 127, 0.74);
-    --expire:red;
+#main-nav {
+    background:var(--theme);
+    text-align:center;
+    display:inline-block;
+}
+
+#main-nav a {
+    text-decoration:none;
+    color:var(--background);
+}
+
+#main-nav ul {
+    padding-left: 0px;
+    margin:0;
+}
+  
+#main-nav li {
+    list-style-type: none;
+    padding: 5px;
+    border:var(--text) 1px solid;
+}
+  
+#main-nav li:hover {
+    border-bottom:var(--maintext) 1px solid;
+}
+
+#nav-items {
+    display:flex;
 }
 
 #browse-aside {
@@ -27,4 +47,20 @@
 
 #browse-nav a:hover {
     background:var(--line);
+}
+
+button a {
+    text-decoration:none;
+    color:var(--maintext);
+}
+
+button {
+    margin-top:10px;
+}
+
+@media only screen and (max-width:900px) {
+    #browse-nav ul {
+        position:relative;
+        right:20%;
+    }
 }

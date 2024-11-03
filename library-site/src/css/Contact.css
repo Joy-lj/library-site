@@ -1,0 +1,35 @@
+#contact-content {
+    background:var(--background);
+    text-align:center;
+    width:1000px;
+    display:block;
+}
+
+#contact-content h1 {
+    color:var(--theme);
+}
+
+#contact-input {
+    display:block;
+    background:var(--theme);
+    width:400px;
+    border-radius:10px;
+    padding:10px;
+    margin:10px;
+    color:var(--background);
+}
+
+#contact-content {
+    overflow:hidden;
+}
+
+@media only screen and (max-width:900px) {
+    #about-div {
+        display:block;
+    }
+
+    #contact-input {
+        width:auto;
+    }
+    
+}

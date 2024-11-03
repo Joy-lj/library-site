@@ -1,0 +1,33 @@
+#login-section {
+    text-align:center;
+}
+
+#login-header {
+    background:var(--background);
+    color:var(--theme);
+    border-bottom:var(--line) 1px solid;
+    margin-bottom:20px;
+}
+
+#login-header h1 {
+    text-align:center;
+}
+
+#signup-div a {
+    text-decoration:none;
+    margin:10px;
+}
+ 
+#signup-div p {
+    margin-right:20px;
+}
+ 
+#signup-button {
+    margin-bottom:10px;
+
+}
+
+#signup-button a {
+    color:var(--maintext);
+}
+ 
