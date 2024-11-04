@@ -7,24 +7,24 @@ import LibraryBooks from "./LibraryBooks";
 
 const LibraryBookSection = () => {
 
-    const [books, setBooks] = useState([]);
+    const [librarybooks, setLibraryBooks] = useState([]);
 
     useEffect(()=>{
         (async() => {
             const response = await axios.get("https://joy-lj.github.io/csce242/projects/part5/books.json");
-            setBooks(response.data);
+            setLibraryBooks(response.data);
         })();
     },[]);
 
     return (
         <div id="book-div" class="book-container" >
-            {books.map((book)=>(
+            {librarybooks.map((librarybook)=>(
                 <LibraryBooks
-                name={book.name} 
-                author={book.author}
-                image={`images/bookcovers/${book.image}`}
-                cite={book.cite}
-                expiration={`Expires in ${book.expiration}!`}
+                name={librarybook.name} 
+                author={librarybook.author}
+                image={`images/bookcovers/${librarybook.image}`}
+                cite={librarybook.cite}
+                expiration={`Expires in ${librarybook.expiration}!`}
                 />
             ))}
         </div>

@@ -21,11 +21,7 @@ const Book = () => {
 
             <div id="book">
                 <div id="book-cover" className="column left">
-                    {bookimage.map((book)=>(
-                    <BookImage 
-                    image="images/bookcovers/tokillamockingbird.jpg"
-                    />  
-                    ))}
+                    <img src="images/bookcovers/tokillamockingbirdcover.jpg"></img>  
                     <p id="cite">@"To Kill a Mockingbird", goodreads, n.d.</p>
                 </div>
                 <div id="book-page" className="column right">

@@ -29,31 +29,19 @@ const BookDescription = () => {
         <div id="main-content">
             <div id="background-div" className="columns">
                 <div id="book-div">
-                {bookimage.map((book)=>(
-                    <BookImage 
-                    image="images/bookcovers/tokillamockingbird.jpg"
-                    />  
-                ))}
+                    <img src="images/bookcovers/tokillamockingbird.jpg"></img>  
                     
                     <div id="available-books">
-                    {booksummary.map((book)=>(
-
-                        <BookSummary
-                        availabilty={book.availabilty}
-                        />
-                    ))}
+                        <p>3 out of 5 available</p>
                     </div>
                     <button><Link to="/borrowedbook">Borrow</Link></button>
                 </div>
                     
                 <div id="book-info">
-                {booksummary.map((book)=>(
-                    <BookSummary 
-                    name={book.name}
-                    author={book.author}
-                    summary={book.summary}
-                    />
-                ))}
+                    <h2>To Kill a Mockingbird</h2>
+                    <h4>Harper Lee</h4>
+                    <p>summary...</p>
+                    <p>themes...</p>
                 </div>
         </div>
     </div>
