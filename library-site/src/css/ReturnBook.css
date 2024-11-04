@@ -1,0 +1,9 @@
+#returnbackground-div {
+    justify-content:center;
+    text-align:center;
+    background:var(--infobackground);
+    width:90%;
+    margin:50px;
+    padding:20px;
+    display:flex;
+}

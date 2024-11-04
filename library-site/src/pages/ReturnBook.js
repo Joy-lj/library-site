@@ -1,9 +1,9 @@
-import "../css/BookDescription.css";
+import "../css/ReturnBook.css";
 import {Link} from "react-router-dom";
 
 const ReturnBook = () => {
     return (
-        <div id="background-div">
+        <div id="returnbackground-div">
             <div id="returnbook-div">
                 <img id="book-image" src="images/bookcovers/tokillamockingbird.jpg"></img>
                 <p id="cite">@"To Kill a Mockingbird", goodreads, n.d.</p>

@@ -10,7 +10,7 @@ const SignUp = () => {
             </header>
             
             <div id="signup" className="center">
-                <h2>Sign Up Here</h2>
+                <h2>Sign Up Here!</h2>
             </div>
 
             <LoginInputs />

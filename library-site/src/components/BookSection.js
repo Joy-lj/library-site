@@ -32,7 +32,7 @@ const BookSection = ({ genre }) => {
                     <Books
                     name={book.name} 
                     author={book.author}
-                    image="images/bookcovers/tokillamockingbird.jpg"
+                    image={`images/bookcovers/${book.image}`}
                     cite={book.cite}
                     availability={book.availability}
                     />

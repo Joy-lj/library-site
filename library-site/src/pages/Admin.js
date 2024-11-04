@@ -14,6 +14,10 @@ const Admin = () => {
 
     return (
         <div id="main-content">
+            <div id="admin-header">
+                    <h2>Admin</h2>    
+            </div>
+
         <AdminAside onAdminChange={handleAdminChange}/>
 
         <section id="admin-section">

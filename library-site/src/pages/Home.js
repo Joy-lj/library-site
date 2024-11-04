@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 
 
 const Home = () => {
-    const [selectedGenre, setSelectedGenre] = useState('Best of 2024!');
+    const [selectedGenre, setSelectedGenre] = useState("Best of 2024!");
 
     const handleGenreChange = (genre) => {
         setSelectedGenre(genre);

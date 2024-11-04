@@ -1,7 +1,18 @@
 import "../css/Book.css";
 import { Link } from "react-router-dom";
+import BookImage from "../components/BookImage";
+import {useState, useEffect} from "react";
+import axios from "axios";
 
 const Book = () => {
+    const [bookimage, setBookImage] = useState([]);
+
+    useEffect(()=>{
+        (async() => {
+            const response = await axios.get("https://joy-lj.github.io/csce242/projects/part5/books.json");
+            setBookImage(response.data);
+        })();
+    },[]);
     return (
         <div id="content">
             <header id="book-header">
@@ -10,7 +21,11 @@ const Book = () => {
 
             <div id="book">
                 <div id="book-cover" className="column left">
-                    <img src="images/bookcovers/tokillamockingbirdcover.jpg"></img>
+                    {bookimage.map((book)=>(
+                    <BookImage 
+                    image="images/bookcovers/tokillamockingbird.jpg"
+                    />  
+                    ))}
                     <p id="cite">@"To Kill a Mockingbird", goodreads, n.d.</p>
                 </div>
                 <div id="book-page" className="column right">
