@@ -24,7 +24,7 @@ const ContactForm = () => {
                         required
                     />
                 </p>
-                <p>
+                <p id="email-input">
                     <input id="email" type="email" placeholder="Email" name="email" required />
                 </p>
                 <p>

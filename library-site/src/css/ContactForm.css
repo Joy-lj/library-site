@@ -1,5 +1,6 @@
 form {
-    margin: 0 2%;
+    margin:0;
+    padding:0px;
 }
   
 form input,
@@ -7,12 +8,9 @@ form textarea,
 form button,
 select {
     font-size:14px;
-    width:200px;
-    height:20px;
-}
-
-.inline {
-    display: inline;
+    width:300px;
+    height:30px;
+    margin:0px;
 }
   
 form textarea {
