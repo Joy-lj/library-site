@@ -7,23 +7,7 @@ import BookImage from "../components/BookImage";
 
 
 const BookDescription = () => {
-    const [booksummary, setBookSummary] = useState([]);
 
-    useEffect(()=>{
-        (async() => {
-            const response = await axios.get("https://joy-lj.github.io/csce242/projects/part5/books.json");
-            setBookSummary(response.data);
-        })();
-    },[]);
-
-    const [bookimage, setBookImage] = useState([]);
-
-    useEffect(()=>{
-        (async() => {
-            const response = await axios.get("https://joy-lj.github.io/csce242/projects/part5/books.json");
-            setBookImage(response.data);
-        })();
-    },[]);
 
     return (
         <div id="main-content">

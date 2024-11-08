@@ -17,7 +17,7 @@ const LibraryBookSection = () => {
     },[]);
 
     return (
-        <div id="book-div" class="book-container" >
+        <div id="book-div" className="book-container" >
             {librarybooks.map((librarybook)=>(
                 <LibraryBooks
                 name={librarybook.name} 

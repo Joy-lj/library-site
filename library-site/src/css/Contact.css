@@ -25,10 +25,6 @@
 }
 
 @media only screen and (max-width:900px) {
-    #about-div {
-        display:block;
-    }
-
     #contact-input {
         width:auto;
     }

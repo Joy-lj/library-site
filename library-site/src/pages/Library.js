@@ -7,9 +7,14 @@ import {useState} from "react";
 const Library = () => {
 
     const [title, setTitle] = useState("Your Library");
+    const [showAside, setShowAside] = useState(true);
 
     const handleLibraryChange = (newTitle) => {
         setTitle(newTitle);
+    };
+
+    const toggleAside = () => {
+        setShowAside(!showAside);
     };
 
     return (
@@ -17,7 +22,12 @@ const Library = () => {
             <div id="main-content">
                 <Search />
                     
-                <LibraryAside onLibraryChange={handleLibraryChange} />
+                <div id="toggle-nav" className="hidden-small-aside" onClick={toggleAside}>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                {showAside && <LibraryAside onLibraryChange={handleLibraryChange} />}
 
                 <div id="library-content">
                     <div id="library-title">

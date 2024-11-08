@@ -5,14 +5,6 @@ import {useState, useEffect} from "react";
 import axios from "axios";
 
 const Book = () => {
-    const [bookimage, setBookImage] = useState([]);
-
-    useEffect(()=>{
-        (async() => {
-            const response = await axios.get("https://joy-lj.github.io/csce242/projects/part5/books.json");
-            setBookImage(response.data);
-        })();
-    },[]);
     return (
         <div id="content">
             <header id="book-header">

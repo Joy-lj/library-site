@@ -63,4 +63,8 @@ button {
         position:relative;
         right:20%;
     }
+
+    #nav-items {
+        display:block;
+    }
 }

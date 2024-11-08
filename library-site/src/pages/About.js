@@ -5,13 +5,26 @@ import {useState} from "react";
 
 const About = () => {
     const [selectedGenre, setSelectedGenre] = useState("Best of 2024!");
+    const [showAside, setShowAside] = useState(true);
+
+
+    const toggleAside = () => {
+        setShowAside(!showAside);
+    };
+
 
     const handleGenreChange = (genre) => {
         setSelectedGenre(genre);
     };
     return (          
         <div id="main-content">
-            <Aside onGenreChange={handleGenreChange}/>
+            <div id="toggle-nav" className="hidden-small-aside" onClick={toggleAside}>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            
+                {showAside && <Aside onGenreChange={handleGenreChange} />}
             <div id="about-content">
                 <h1 id="about-title">About</h1>
             <div id="about-div">

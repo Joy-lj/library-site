@@ -16,3 +16,17 @@ select {
 form textarea {
     min-height: 200px;
 }
+
+@media only screen and (max-width:900px) {
+
+    form input,
+    form textarea,
+    form button,
+    select {
+        font-size:14px;
+        width:auto;
+        height:30px;
+        margin:0px;
+    }
+    
+}
