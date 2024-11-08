@@ -13,7 +13,7 @@ const Book = () => {
 
             <div id="book">
                 <div id="book-cover" className="column left">
-                    <img src="images/bookcovers/tokillamockingbirdcover.jpg"></img>  
+                    <img src="http://localhost:3000/images/bookcovers/tokillamockingbirdcover.jpg"></img>  
                     <p id="cite">@"To Kill a Mockingbird", goodreads, n.d.</p>
                 </div>
                 <div id="book-page" className="column right">

@@ -4,6 +4,7 @@
     --maintext:black;
     --background:white;
     --line:#BBBBBB;
+    --infobackground: rgb(55, 127, 127, 0.74);
     --expire:red;
 }
 

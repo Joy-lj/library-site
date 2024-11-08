@@ -13,7 +13,7 @@ const BookDescription = () => {
         <div id="main-content">
             <div id="background-div" className="columns">
                 <div id="book-div">
-                    <img src="images/bookcovers/tokillamockingbird.jpg"></img>  
+                    <img src="http://localhost:3000/images/bookcovers/tokillamockingbird.jpg"></img>  
                     
                     <div id="available-books">
                         <p>3 out of 5 available</p>

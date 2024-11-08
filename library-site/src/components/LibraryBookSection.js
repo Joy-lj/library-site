@@ -22,7 +22,7 @@ const LibraryBookSection = () => {
                 <LibraryBooks
                 name={librarybook.name} 
                 author={librarybook.author}
-                image={`images/bookcovers/${librarybook.image}`}
+                image={librarybook.image}
                 cite={librarybook.cite}
                 expiration={`Expires in ${librarybook.expiration}!`}
                 />
