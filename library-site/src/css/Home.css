@@ -20,9 +20,4 @@
     color:var(--theme);
 }
 
-#toggle-nav div {
-    width:25px;
-    height:2px;
-    background-color:var(--maintext);
-    margin:6px 0;
-}
+

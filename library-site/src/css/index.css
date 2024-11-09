@@ -13,13 +13,4 @@ body {
     font-family:Arial, Helvetica, sans-serif;
 }
 
-.hidden-small-aside {
-    display:none;
-}
 
-@media only screen and (max-width:900px) {
-    .hidden-small-aside {
-        display:block;
-    }
-
-}

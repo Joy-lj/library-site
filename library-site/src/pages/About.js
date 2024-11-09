@@ -2,29 +2,17 @@ import "../css/About.css";
 import Aside from "../components/Aside";
 import {Link} from "react-router-dom";
 import {useState} from "react";
+import AltAside from "../components/AltAside";
 
 const About = () => {
     const [selectedGenre, setSelectedGenre] = useState("Best of 2024!");
-    const [showAside, setShowAside] = useState(true);
-
-
-    const toggleAside = () => {
-        setShowAside(!showAside);
-    };
-
 
     const handleGenreChange = (genre) => {
         setSelectedGenre(genre);
     };
     return (          
         <div id="main-content">
-            <div id="toggle-nav" className="hidden-small-aside" onClick={toggleAside}>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            
-                {showAside && <Aside onGenreChange={handleGenreChange} />}
+            <AltAside onGenreChange={handleGenreChange} />
             <div id="about-content">
                 <h1 id="about-title">About</h1>
             <div id="about-div">

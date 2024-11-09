@@ -3,7 +3,7 @@ import "../css/Aside.css";
 import {useState} from 'react';
 
 
-const Aside = ({ onGenreChange }) => {
+const AltAside = ({ onGenreChange }) => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -25,18 +25,6 @@ const Aside = ({ onGenreChange }) => {
                     <li><Link to="/contact" onClick={() => onGenreChange("Contact")}>Contact</Link></li>
                 </ul>
             </nav>
-
-            <nav id="browse-nav">
-                <h4>Browse Genres</h4>
-                    <ul>
-                        <li><Link to="/" onClick={() => onGenreChange("Nonfiction")}>Nonfiction</Link></li>
-                        <li><Link to="/" onClick={() => onGenreChange("Fantasy")}>Fantasy</Link></li>
-                        <li><Link to="/"onClick={() => onGenreChange("Horror")}>Horror</Link></li>
-                        <li><Link to="/" onClick={() => onGenreChange("Romance")}>Romance</Link></li>
-                        <li><Link to="/" onClick={() => onGenreChange("Sci-fi")}>Sci-fi</Link></li>
-                    </ul>
-                <h4><Link to="/" onClick={() => onGenreChange("Recently Added")}>Recently Added</Link></h4>
-            </nav>
             
             <button><Link to="/login">Login/Sign Up</Link></button>
         </aside>
@@ -44,4 +32,4 @@ const Aside = ({ onGenreChange }) => {
     );
 };
 
-export default Aside;
+export default AltAside;

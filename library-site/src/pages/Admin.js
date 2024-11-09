@@ -7,12 +7,6 @@ import AdminUsers from "../components/AdminUsers";
 
 const Admin = () => {
     const [section, setSection] = useState("Books");
-    const [showAside, setShowAside] = useState(true);
-
-    const toggleAside = () => {
-        setShowAside(!showAside);
-    };
-
 
     const handleAdminChange = (newSection) => {
         setSection(newSection);
@@ -24,13 +18,7 @@ const Admin = () => {
                     <h2>Admin</h2>    
             </div>
 
-            <div id="toggle-nav" className="hidden-small-aside" onClick={toggleAside}>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-
-        {showAside && <AdminAside onAdminChange={handleAdminChange}/>}
+            <AdminAside onAdminChange={handleAdminChange}/>
 
             <section id="admin-section">
                 <h1 id="admin-title"><strong>Admin Dashboard: {section}</strong></h1>

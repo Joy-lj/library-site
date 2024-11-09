@@ -1,8 +1,5 @@
 import "../css/Book.css";
 import { Link } from "react-router-dom";
-import BookImage from "../components/BookImage";
-import {useState, useEffect} from "react";
-import axios from "axios";
 
 const Book = () => {
     return (

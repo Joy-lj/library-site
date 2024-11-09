@@ -1,9 +1,22 @@
 import "../css/Aside.css";
 import { Link } from "react-router-dom";
+import {useState} from "react";
 
 const AdminAside = ({onAdminChange}) => {
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
+
     return (
-        <aside id="browse-aside">
+        <>
+        <div id="toggle-nav" onClick={toggleMenu} className="hidden-small-aside">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <aside id="browse-aside" className={menuOpen ? "" : "hidden-small-aside"}>
             <nav id="main-nav">
                 <ul id="nav-items">
                     <li><Link to="/">Home</Link></li>
@@ -17,6 +30,7 @@ const AdminAside = ({onAdminChange}) => {
             </nav>
             <button><Link to="/login">Logout</Link></button>
         </aside>
+        </>
     );
 };
 
