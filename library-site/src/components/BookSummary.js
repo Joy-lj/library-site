@@ -1,13 +1,19 @@
+import React from "react";
 
-const BookSummary = (book) => {
+const BookSummary = ({ name, author, summary, themes, availability }) => {
     return (
         <section>
-            <h2>{book.name}</h2>
-            <h4>{book.author}</h4>
-            <p>{book.summary}</p>
-            <p>Availability: {book.availability}</p>
+            <h2>{name}</h2>
+            <h4>{author}</h4>
+            <p>{summary}</p>
+            <p>{availability}</p>
+            <ul>
+                {themes && themes.map((theme, index) => (
+                    <li key={index}>{theme}</li>
+                ))}
+            </ul>
         </section>
     );
-};  
+};
 
 export default BookSummary;

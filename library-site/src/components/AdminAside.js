@@ -11,7 +11,7 @@ const AdminAside = ({onAdminChange}) => {
 
     return (
         <>
-        <div id="toggle-nav" onClick={toggleMenu} className="hidden-small-aside">
+        <div id="toggle-nav" onClick={toggleMenu} className="hidden-small">
             <div></div>
             <div></div>
             <div></div>

@@ -3,6 +3,8 @@ import React from "react";
 import {useState, useEffect } from "react";
 import axios from "axios";
 import Books from "./Books";
+import { Link } from "react-router-dom";
+
 
 const BookSection = () => {
     const [books, setBooks] = useState([]);
@@ -21,6 +23,7 @@ const BookSection = () => {
                     {books.map((book)=>(
                     <Books
                     key={book.id}
+                    id={book.id}
                     name={book.name} 
                     author={book.author}
                     image={book.image}
