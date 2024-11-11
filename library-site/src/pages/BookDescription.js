@@ -6,7 +6,7 @@ import {Link, useParams} from "react-router-dom";
 
 
 const BookDescription = () => {
-    const { id } = useParams();  // Get the book ID from the URL
+    const { id } = useParams();
     const [book, setBook] = useState(null);
 
     useEffect(() => {
