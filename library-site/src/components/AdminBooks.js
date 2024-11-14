@@ -9,7 +9,7 @@ const AdminBooks = () => {
                 <p>Harper Lee</p>
                 <div id="book-buttons">
                     <div>
-                        <img src="http://localhost:3000/images/bookcovers/tokillamockingbird.jpg"></img>
+                        <img src="https://library-site-backend.onrender.com/images/bookcovers/tokillamockingbird.jpg"></img>
                         <p id="cite">@"To Kill a Mockingbird", goodreads, n.d.</p>      
                     </div>                              
                     <div id="buttons-div">
@@ -24,7 +24,7 @@ const AdminBooks = () => {
                 <p>Jane Austin</p>
                 <div id="book-buttons">
                     <div>
-                        <img src="http://localhost:3000/images/bookcovers/prideandprejudice.jpg"></img>
+                        <img src="https://library-site-backend.onrender.com/images/bookcovers/prideandprejudice.jpg"></img>
                         <p id="cite">@"Pride and Prejudice", goodreads, n.d.</p>        
                     </div>                      
                     <div id="buttons-div">
@@ -42,7 +42,7 @@ const AdminBooks = () => {
                 <p>J.R.R. Tolkien</p>
                 <div id="book-buttons">
                     <div>
-                        <img src="http://localhost:3000/images/bookcovers/lordoftherings.jpg"></img>
+                        <img src="https://library-site-backend.onrender.com/images/bookcovers/lordoftherings.jpg"></img>
                         <p id="cite">@"The Lord of the Rings", goodreads, n.d.</p>    
                     </div>                            
                     <div id="buttons-div">
@@ -57,7 +57,7 @@ const AdminBooks = () => {
                     <p>Louisa May Alcott</p>
                     <div id="book-buttons">
                         <div>
-                            <img src="http://localhost:3000/images/bookcovers/littlewomen.jpg"></img>
+                            <img src="https://library-site-backend.onrender.com/images/bookcovers/littlewomen.jpg"></img>
                             <p id="cite">@"Little Women", goodreads, n.d.</p>     
                         </div>                            
                         <div id="buttons-div">

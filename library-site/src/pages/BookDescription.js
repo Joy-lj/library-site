@@ -11,7 +11,7 @@ const BookDescription = () => {
 
     useEffect(() => {
         const fetchBook = async () => {
-            const response = await axios.get("https://joy-lj.github.io/csce242/projects/part5/books.json");
+            const response = await axios.get("https://library-site-backend.onrender.com/api/books");
             const selectedBook = response.data.find((item) => item.id === id);
             setBook(selectedBook);
         };
@@ -26,7 +26,7 @@ const BookDescription = () => {
         <div id="main-content">
             <div id="background-div" className="columns">
                 <div id="book-div">
-                    <img src={"http://localhost:3000/images/bookcovers/" + book.image}></img>  
+                    <img src={"https://library-site-backend.onrender.com/images/bookcovers/" + book.image}></img>  
                     
                     <div id="available-books">
                     <BookSummary

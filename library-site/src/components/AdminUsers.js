@@ -7,7 +7,7 @@ const AdminUsers = () => {
             <section className="one">
                 <p>John Doe</p>
                 <div id="book-buttons">
-                    <img src="http://localhost:3000/images/usericon.png"></img>
+                    <img src="https://library-site-backend.onrender.com/images/usericon.png"></img>
                     <div id="buttons-div">
                         <button id="add">Add</button>
                         <button id="edit">Edit</button>
@@ -18,7 +18,7 @@ const AdminUsers = () => {
             <section className="one">
                 <p>John Doe</p>
                 <div id="book-buttons">
-                    <img src="http://localhost:3000/images/usericon.png"></img>
+                    <img src="https://library-site-backend.onrender.com/images/usericon.png"></img>
                     <div id="buttons-div">
                         <button id="add">Add</button>
                         <button id="edit">Edit</button>
@@ -32,7 +32,7 @@ const AdminUsers = () => {
         <section className="one">
                 <p>John Doe</p>
                 <div id="book-buttons">
-                    <img src="http://localhost:3000/images/usericon.png"></img>
+                    <img src="https://library-site-backend.onrender.com/images/usericon.png"></img>
                     <div id="buttons-div">
                         <button id="add">Add</button>
                         <button id="edit">Edit</button>
@@ -43,7 +43,7 @@ const AdminUsers = () => {
             <section className="one">
                 <p>John Doe</p>
                 <div id="book-buttons">
-                    <img src="http://localhost:3000/images/usericon.png"></img>
+                    <img src="https://library-site-backend.onrender.com/images/usericon.png"></img>
                     <div id="buttons-div">
                         <button id="add">Add</button>
                         <button id="edit">Edit</button>

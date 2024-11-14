@@ -6,7 +6,7 @@ const Books = (book) => {
         <section>
             <h3><Link to={`/bookdescription/${book.id}`}>{book.name}</Link></h3>
             <p>{book.author}</p>
-            <Link to={`/bookdescription/${book.id}`}><img src={"http://localhost:3000/images/bookcovers/" + book.image}/></Link>
+            <Link to={`/bookdescription/${book.id}`}><img src={"https://library-site-backend.onrender.com/images/bookcovers/" + book.image}/></Link>
             <p id="cite">{book.cite}</p>            
             <p>Availability: {book.availability}</p>
         </section>

@@ -11,7 +11,7 @@ const LibraryBookSection = () => {
 
     useEffect(()=>{
         (async() => {
-            const response = await axios.get("https://joy-lj.github.io/csce242/projects/part5/books.json");
+            const response = await axios.get("https://library-site-backend.onrender.com/api/books");
             setLibraryBooks(response.data);
         })();
     },[]);

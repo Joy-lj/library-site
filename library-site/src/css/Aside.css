@@ -12,12 +12,14 @@
 #main-nav ul {
     padding-left: 0px;
     margin:0;
+    
 }
   
 #main-nav li {
     list-style-type: none;
     padding: 5px;
     border:var(--text) 1px solid;
+    width:100%;
 }
   
 #main-nav li:hover {
@@ -67,6 +69,10 @@ button {
 
 .hidden-small {
     display:none;
+}
+
+#add-book {
+    display: block;
 }
 
 @media only screen and (max-width:900px) {
