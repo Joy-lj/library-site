@@ -9,7 +9,7 @@ const LibraryBooks = (librarybook) => {
             <p>{librarybook.author}</p>
             <Link to="/book"><img src={"https://library-site-backend.onrender.com/images/bookcovers/" + librarybook.image}/></Link>
             <p id="cite">{librarybook.cite}</p>            
-            <p id="expiration-book">{librarybook.expiration}</p>
+            <p id="expiration">{librarybook.expiration}</p>
         </section>
     );
 };
