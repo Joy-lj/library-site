@@ -30,7 +30,12 @@ const AddBook = (props) => {
     });
 
     if(response.status == 200){
-      setResult("Book successfully added!");
+      setResult("Book added!");
+      props.showNewBook(await response.json());
+      event.target.reset();
+      props.closeDialog();
+    } else {
+      setResult("Error adding book");
     }
   };
 
@@ -39,7 +44,7 @@ const AddBook = (props) => {
     <div id="add-dialog" className="w3-modal">
       <div className="w3-modal-content">
         <div className="w3-container">
-          <span id="dialog-close" className="w3-button w3-display-topright" onClick={props.closeDialog}>
+          <span id="close-dialog" className="w3-button w3-display-topright" onClick={props.closeDialog}>
             &times;
           </span>
           <form id="add-property-form" onSubmit={addToServer}>
@@ -58,10 +63,6 @@ const AddBook = (props) => {
             <p>
               <label htmlFor="availability">Book Availability:</label>
               <input type="text" id="availability" name="availability" required value={inputs.availability || ""} onChange={handleChange}/>
-            </p>
-            <p>
-              <label htmlFor="themes">Book Themes:</label>
-              <input type="text" id="themes" name="themes" required value={inputs.themes || ""} onChange={handleChange}/>
             </p>
             <p>
               <label htmlFor="cite">Book Cite:</label>

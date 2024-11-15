@@ -3,8 +3,6 @@ import React from "react";
 import {useState, useEffect } from "react";
 import axios from "axios";
 import Books from "./Books";
-import { Link } from "react-router-dom";
-
 
 const BookSection = () => {
     const [books, setBooks] = useState([]);

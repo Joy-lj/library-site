@@ -8,16 +8,16 @@
   display: block;
 }
 
-#delete-content {
-  margin-bottom: 10px;
-}
-
 #img-prev {
   max-width: 100%;
 }
 
 #delete-dialog button {
-  margin-right: 10px;
+  margin-right: 50px;
+}
+
+#close-dialog {
+  margin-left:170px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -32,4 +32,9 @@
   #img-upload {
     flex: 6;
   }
+
+  #close-dialog {
+    margin-left:300px;
+  }
+
 }

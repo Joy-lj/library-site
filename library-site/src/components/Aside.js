@@ -1,14 +1,39 @@
 import {Link} from "react-router-dom";
 import "../css/Aside.css";
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
+import AddBook from "./AddBook";
+import axios from "axios";
 
 
 const Aside = ({ onGenreChange }) => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [showAddDialog, setShowAddDialog] = useState(false);
+    const [books, setBooks] = useState([]);
+
+
+    useEffect(() => {
+        (async () => {
+          const response = await axios.get("https://library-site-backend.onrender.com/api/books/");
+          setBooks(response.data);
+        })();
+      }, []);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
+
+    const openAddDialog = () => {
+        setShowAddDialog(true);
+    };
+
+    const closeAddDialog = () => {
+        setShowAddDialog(false);
+    };
+
+    const updateBook = (book) => {
+        setBooks((books=>[...books, book]));
+      };
+    
 
     return (
         <>
@@ -39,6 +64,12 @@ const Aside = ({ onGenreChange }) => {
             </nav>
             
             <button><Link to="/login">Login/Sign Up</Link></button>
+
+            <button id="add-book" onClick={openAddDialog}>Add Book</button>
+            {showAddDialog ? (
+                <AddBook closeDialog={closeAddDialog} showNewHouse={updateBook}/>
+
+            ):("")}
         </aside>
         </>
     );
