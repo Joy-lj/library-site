@@ -2,13 +2,21 @@
   position: relative;
 }
 
+#add-dialog {
+  background:var(--infobackground);
+  border-radius:10px;
+  padding:10px;
+  color:var(--text);
+  width:330px;
+}
+
 #add-dialog,
 #edit-dialog,
 #delete-dialog {
   display: block;
 }
 
-#img-prev {
+#image-prev {
   max-width: 100%;
 }
 
@@ -17,7 +25,15 @@
 }
 
 #close-dialog {
-  margin-left:170px;
+  margin-left:320px;
+}
+
+label {
+  display:block;
+}
+
+p {
+  margin-left:10px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -31,10 +47,6 @@
 
   #img-upload {
     flex: 6;
-  }
-
-  #close-dialog {
-    margin-left:300px;
   }
 
 }

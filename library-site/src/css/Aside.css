@@ -71,10 +71,6 @@ button {
     display:none;
 }
 
-#add-book {
-    display: block;
-}
-
 @media only screen and (max-width:900px) {
     #browse-nav ul {
         position:relative;

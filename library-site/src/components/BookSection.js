@@ -3,9 +3,11 @@ import React from "react";
 import {useState, useEffect } from "react";
 import axios from "axios";
 import Books from "./Books";
+import AddBook from "./AddBook";
 
 const BookSection = () => {
     const [books, setBooks] = useState([]);
+    const [showAddDialog, setShowAddDialog] = useState(false);
 
     useEffect(()=>{
         (async() => {
@@ -17,9 +19,28 @@ const BookSection = () => {
         })();
     },[]);
 
+    
+    const openAddDialog = () => {
+        setShowAddDialog(true);
+    };
+
+    const closeAddDialog = () => {
+        setShowAddDialog(false);
+    };
+
+    const updateBook = (book) => {
+        setBooks((books=>[...books, book]));
+      };
+    
+
     return (
         <>
             <section id="book-section">
+                <button id="add-book" onClick={openAddDialog}>Add Book</button>
+                {showAddDialog ? (
+                    <AddBook closeDialog={closeAddDialog} showNewBook={updateBook}/>
+
+                ):("")}
                 <div id="book-div" className="book-container" >
                     {books.map((book)=>(
                     <Books
@@ -33,6 +54,8 @@ const BookSection = () => {
                     />
                     ))}
                 </div>
+
+                
             </section>
         
         </>
