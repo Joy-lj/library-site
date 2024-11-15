@@ -67,7 +67,7 @@ const Aside = ({ onGenreChange }) => {
 
             <button id="add-book" onClick={openAddDialog}>Add Book</button>
             {showAddDialog ? (
-                <AddBook closeDialog={closeAddDialog} showNewHouse={updateBook}/>
+                <AddBook closeDialog={closeAddDialog} showNewBook={updateBook}/>
 
             ):("")}
         </aside>

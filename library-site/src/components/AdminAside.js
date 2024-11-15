@@ -6,6 +6,8 @@ import AddBook from "./AddBook";
 const AdminAside = ({onAdminChange}) => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [showAddDialog, setShowAddDialog] = useState(false);
+    const [books, setBooks] = useState([]);
+
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -18,6 +20,11 @@ const AdminAside = ({onAdminChange}) => {
     const closeAddDialog = () => {
         setShowAddDialog(false);
     };
+
+    const updateBook = (book) => {
+        setBooks((books=>[...books, book]));
+      };
+    
 
     return (
         <>
@@ -41,7 +48,7 @@ const AdminAside = ({onAdminChange}) => {
 
             <button id="add-book" onClick={openAddDialog}>Add Book</button>
             {showAddDialog ? (
-                <AddBook closeDialog={closeAddDialog} />
+                <AddBook closeDialog={closeAddDialog} showNewBook={updateBook}/>
 
             ):("")}
             <button><Link to="/login">Logout</Link></button>

@@ -29,7 +29,7 @@ const AddBook = (props) => {
       body:formData
     });
 
-    if(response.status == 200){
+    if(response.status === 200){
       setResult("Book added!");
       props.showNewBook(await response.json());
       event.target.reset();
@@ -49,7 +49,7 @@ const AddBook = (props) => {
           </span>
           <form id="add-property-form" onSubmit={addToServer}>
             <p>
-              <label htmlFor="name ">Book Name:</label>
+              <label htmlFor="name">Book Name:</label>
               <input type="text" id="name" name="name" required value={inputs.name || ""} onChange={handleChange} />
             </p>
             <p>
@@ -74,12 +74,12 @@ const AddBook = (props) => {
             </p>
 
             <section className="columns">
-              <p id="img-prev-section">
-                <img id="img-prev" alt="" src={inputs.img != null ? URL.createObjectURL(inputs.img) : ""}/>
+              <p id="image-prev-section">
+                <img id="image-prev" alt="" src={inputs.image != null ? URL.createObjectURL(inputs.image) : ""}/>
               </p>
-              <p id="img-upload">
-                <label htmlFor="img">Upload Image:</label>
-                <input type="file" id="img" name="img" accept="image/*" onChange={handleImageChange}/>
+              <p id="image-upload">
+                <label htmlFor="image">Upload Image:</label>
+                <input type="file" id="image" name="image" accept="image/*" onChange={handleImageChange}/>
               </p>
             </section>
             <p>
