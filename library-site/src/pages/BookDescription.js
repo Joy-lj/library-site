@@ -12,7 +12,7 @@ const BookDescription = () => {
     useEffect(() => {
         const fetchBook = async () => {
             const response = await axios.get("https://library-site-backend.onrender.com/api/books");
-            const selectedBook = response.data.find((item) => item.id === id);
+            const selectedBook = response.data.find((item) => item.id === parseInt(id));
             setBook(selectedBook);
         };
         fetchBook();
