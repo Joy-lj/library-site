@@ -1,55 +1,54 @@
 import "../css/ContactForm.css";
+import {useState} from "react";
 
 const ContactForm = () => {
-    return (
-        <div id="form-map">
-            <div id="contact-input" className="columns">
-                <h2>Contact Us</h2>
-                <form
-                    id="contact-form"
-                    action="https://api.web3forms.com/submit"
-                    method="POST"
-                >
-                <input
-                    type="hidden"
-                    name="access_key"
-                    value="9ac42b14-d904-461d-83cb-aac44f894241"
-                />
-                <p>
-                    <input
-                        id="name"
-                        type="text"
-                        placeholder="First and Last Name"
-                        name="name"
-                        required
-                    />
-                </p>
-                <p id="email-input">
-                    <input id="email" type="email" placeholder="Email" name="email" required />
-                </p>
-                <p>
-                    <textarea id="message" placeholder="Type your message..." name="message" required></textarea>
-                </p>
-                    <input
-                        type="hidden"
-                        name="redirect"
-                        value="https://web3forms.com/success"
-                    />
-                    <input
-                        type="hidden"
-                        name="subject"
-                        value="Contact from Joy's Online Library"
-                    />
-                    <input type="hidden" name="from_name" value="My Website" />
+    const [result, setResult] = useState("");
+      
+    const onSubmit = async (event) => {
+        event.preventDefault();
+        setResult("Sending....");
+        const formData = new FormData(event.target);
+      
+        formData.append("access_key", "9ac42b14-d904-461d-83cb-aac44f894241");
+      
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+      
+          const data = await response.json();
+      
+          if (data.success) {
+            setResult("Form sent!");
+            event.target.reset();
+          } else {
+            console.log("Error", data);
+            setResult(data.message);
+          }
+    };
+      
+        return (
+            <div id="form-map">
+                <div id="contact-input" className="columns">
+                    <h2>Contact Us</h2>
+                    <form id="contact-form" onSubmit={onSubmit}>
                         <p>
-                            <button type="submit">Send Message</button>
+                            <input type="text" name="name" id="name" placeholder="First and Last Name" required/>
                         </p>
-                
-                        <p id="result"></p>
-                        </form> 
+                        <p>
+                            <input type="email" name="email" id="email" placeholder="Email" required/>  
+                        </p>
+                        <p>
+                            <textarea name="message" id="message" placeholder="Type your message..."required></textarea>  
+                        </p>
+              
+                        <button type="submit">Submit Form</button>
+      
+                    </form>
+                    <span>{result}</span>
+                </div>
             </div>
-        </div> 
-    );
-};
+        );
+      }
 
 export default ContactForm;

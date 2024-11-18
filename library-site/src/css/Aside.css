@@ -12,12 +12,11 @@
 #main-nav ul {
     padding-left: 0px;
     margin:0;
-    
 }
   
 #main-nav li {
     list-style-type: none;
-    padding: 5px;
+    padding:5px;
     border:var(--text) 1px solid;
     width:100%;
 }
@@ -95,6 +94,10 @@ button {
 
     .hidden-small {
         display:block;
+    }
+
+    #main-nav ul {
+        padding-right:10px;
     }
 
 }
