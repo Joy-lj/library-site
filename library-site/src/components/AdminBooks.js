@@ -10,7 +10,7 @@ const AdminBooks = () => {
                 <div id="book-buttons">
                     <div>
                         <img src="https://library-site-backend.onrender.com/images/bookcovers/tokillamockingbird.jpg"></img>
-                        <p id="cite">@"To Kill a Mockingbird", goodreads, n.d.</p>      
+                        <p id="cite-book">@"To Kill a Mockingbird", goodreads, n.d.</p>      
                     </div>                              
                     <div id="buttons-div">
                         <button id="add">Add</button>
@@ -25,7 +25,7 @@ const AdminBooks = () => {
                 <div id="book-buttons">
                     <div>
                         <img src="https://library-site-backend.onrender.com/images/bookcovers/prideandprejudice.jpg"></img>
-                        <p id="cite">@"Pride and Prejudice", goodreads, n.d.</p>        
+                        <p id="cite-book">@"Pride and Prejudice", goodreads, n.d.</p>        
                     </div>                      
                     <div id="buttons-div">
                         <button id="add">Add</button>
@@ -43,7 +43,7 @@ const AdminBooks = () => {
                 <div id="book-buttons">
                     <div>
                         <img src="https://library-site-backend.onrender.com/images/bookcovers/lordoftherings.jpg"></img>
-                        <p id="cite">@"The Lord of the Rings", goodreads, n.d.</p>    
+                        <p id="cite-book">@"The Lord of the Rings", goodreads, n.d.</p>    
                     </div>                            
                     <div id="buttons-div">
                         <button id="add">Add</button>
@@ -58,7 +58,7 @@ const AdminBooks = () => {
                     <div id="book-buttons">
                         <div>
                             <img src="https://library-site-backend.onrender.com/images/bookcovers/littlewomen.jpg"></img>
-                            <p id="cite">@"Little Women", goodreads, n.d.</p>     
+                            <p id="cite-book">@"Little Women", goodreads, n.d.</p>     
                         </div>                            
                         <div id="buttons-div">
                         <button id="add">Add</button>
