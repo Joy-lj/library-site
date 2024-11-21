@@ -1,75 +1,96 @@
 import "../css/Admin.css";
+import { useState } from "react";
+import EditBook from "./EditBook";
+import DeleteBook from "./DeleteBook";
+import { Link } from "react-router-dom";
 
-const AdminBooks = () => {
+
+const AdminBooks = (props) => {
+    const [showEditDialog, setShowEditDialog] = useState(false);
+    const [showDeleteDialog, setShowDeleteDialog] = useState(false);
+    const [book, setBook] = useState(props);
+    const [showBook, setShowBook] = useState(true);
+  
+    const openEditDialog = () => {
+      setShowEditDialog(true);
+    };
+  
+    const closeEditDialog = () => {
+      setShowEditDialog(false);
+    };
+  
+    const openDeleteDialog = () => {
+      setShowDeleteDialog(true);
+    };
+  
+    const closeDeleteDialog = () => {
+      setShowDeleteDialog(false);
+    };
+  
+    const hideBook = () => {
+      setShowBook(false);
+    }
+  
+    const editBook = (newBook) => {
+      setBook(newBook);
+    };  
     return (
         <>
-        <div id="admin-book" className="columns">
-            <section className="one">
-                <p>To Kill a Mockingbird</p>
-                <p>Harper Lee</p>
-                <div id="book-buttons">
-                    <div>
-                        <img src="https://library-site-backend.onrender.com/images/bookcovers/tokillamockingbird.jpg"></img>
-                        <p id="cite-book">@"To Kill a Mockingbird", goodreads, n.d.</p>      
-                    </div>                              
-                    <div id="buttons-div">
-                        <button id="add">Add</button>
-                        <button id="edit">Edit</button>
-                        <button id="delete">Delete</button>   
-                    </div>
-                </div>
-            </section>
-            <section className="one">
-                <p>Pride and Prejudice</p>
-                <p>Jane Austin</p>
-                <div id="book-buttons">
-                    <div>
-                        <img src="https://library-site-backend.onrender.com/images/bookcovers/prideandprejudice.jpg"></img>
-                        <p id="cite-book">@"Pride and Prejudice", goodreads, n.d.</p>        
-                    </div>                      
-                    <div id="buttons-div">
-                        <button id="add">Add</button>
-                        <button id="edit">Edit</button>
-                        <button id="delete">Delete</button>   
-                    </div>
-                </div>
-            </section>
-        </div>
+            {showBook ? (
+            <div>
+                {showDeleteDialog ? (
+                    <DeleteBook
+                    closeDialog={closeDeleteDialog}
+                    hideBook = {hideBook}
+                    name={book.name}
+                    id={book.id}
+                    />
+                ) : (
+                 ""
+            )}
 
-        <div id="admin-book" class="columns">
-            <section className="one">
-                <p>The Lord of the Rings</p>
-                <p>J.R.R. Tolkien</p>
-                <div id="book-buttons">
-                    <div>
-                        <img src="https://library-site-backend.onrender.com/images/bookcovers/lordoftherings.jpg"></img>
-                        <p id="cite-book">@"The Lord of the Rings", goodreads, n.d.</p>    
-                    </div>                            
-                    <div id="buttons-div">
-                        <button id="add">Add</button>
-                        <button id="edit">Edit</button>
-                        <button id="delete">Delete</button>   
-                    </div>
-                </div>
+            {showEditDialog ? (
+                <EditBook
+                closeDialog={closeEditDialog}
+                updateBook = {editBook}
+                id={book.id}
+                name={book.name}
+                author={book.author}
+                image={book.image}
+                summary={book.summary}
+                availability={book.availability}
+                cite={book.cite}
+                expiration={book.expiration}
+                />
+            ) : (
+                ""
+            )}
+            <section className="book columns">
+                <section className="feature-image">
+                    <img
+                        src={"https://library-site-backend.onrender.com/images/bookcovers/" + book.image}
+                        alt={book.name}
+                    />
                 </section>
-                <section className="one">
-                    <p>Little Women</p>
-                    <p>Louisa May Alcott</p>
-                    <div id="book-buttons">
-                        <div>
-                            <img src="https://library-site-backend.onrender.com/images/bookcovers/littlewomen.jpg"></img>
-                            <p id="cite-book">@"Little Women", goodreads, n.d.</p>     
-                        </div>                            
-                        <div id="buttons-div">
-                        <button id="add">Add</button>
-                        <button id="edit">Edit</button>
-                        <button id="delete">Delete</button>   
-                    </div>
-                    </div>
+                <section className="info">
+                    <header className="columns">
+                        <h3>{book.name}</h3>
+                        <section id="change-buttons">
+                            <a href="#" onClick={openEditDialog}>
+                            &#9998;
+                            </a>
+                            <a href="#" onClick={openDeleteDialog}>
+                            &#x2715;
+                            </a>
+                        </section>
+                    </header>
+                    </section>
                 </section>
-        </div>
+            </div>
+            ) : (
+            ""
+            )}
         </>
-
     );
 };
 

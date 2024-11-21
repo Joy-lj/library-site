@@ -4,16 +4,16 @@ const LoginInputs = () => {
     return (
 
     <>
-        <div id="firstname" class="center">
+        <div id="firstname" className="center">
             <input id="firstname-bar" type="text" placeholder="First Name"></input>
         </div>    
-        <div id="lastname" class="center">
+        <div id="lastname" className="center">
             <input id="lastname-bar" type="text" placeholder="Last Name"></input>
         </div>
-        <div id="email" class="center">
+        <div id="email" className="center">
             <input id="email-bar" type="text" placeholder="Email"></input>
         </div>
-        <div id="password" class="center">
+        <div id="password" className="center">
             <input id="password-bar" type="text" placeholder="Password"></input>
         </div>
     </>

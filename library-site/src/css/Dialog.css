@@ -16,6 +16,10 @@
   display: block;
 }
 
+#delete-content {
+  margin-bottom: 10px;
+}
+
 #image-prev {
   max-width: 100%;
 }
