@@ -20,7 +20,7 @@ const Admin = () => {
         (async() => {
             const response = await axios.get(
                 "https://library-site-backend.onrender.com/api/books/"
-               // "http://localhost:3000/api/books/"
+                //"http://localhost:3000/api/books/"
             );
             setBooks(response.data);
         })();
@@ -35,7 +35,7 @@ const Admin = () => {
     };
 
     const updateBook = (book) => {
-        setBooks((books=>[...books, book]));
+        setBooks((books)=>[...books, book]);
       };
 
     return (

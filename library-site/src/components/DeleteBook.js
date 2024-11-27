@@ -5,7 +5,7 @@ const DeleteBook = (props) => {
   const [result, setResult] = useState("");
 
   const deleteBook = async() => {
-   const response = await fetch(`https://library-site-backend.onrender.com/api/books/${props._id}`,{
+   const response = await fetch(`https://library-site-backend.onrender.com/api/books/${props.id}`,{
     method:"DELETE"
    });
 

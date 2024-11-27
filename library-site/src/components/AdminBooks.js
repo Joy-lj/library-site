@@ -2,8 +2,6 @@ import "../css/Admin.css";
 import { useState } from "react";
 import EditBook from "./EditBook";
 import DeleteBook from "./DeleteBook";
-import { Link } from "react-router-dom";
-
 
 const AdminBooks = (props) => {
     const [showEditDialog, setShowEditDialog] = useState(false);

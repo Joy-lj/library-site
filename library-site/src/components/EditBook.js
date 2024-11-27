@@ -32,7 +32,7 @@ const EditBook = (props) => {
 
     const formData = new FormData(event.target);
     console.log(...formData);
-    const response = await fetch(`https://library-site-backend.onrender.com/api/books/${props._id}`,{
+    const response = await fetch(`https://library-site-backend.onrender.com/api/books/${props.id}`,{
       method:"PUT",
       body:formData
     });
@@ -60,7 +60,7 @@ const EditBook = (props) => {
           </span>
           <form id="edit-property-form" onSubmit={onSubmit}>
             <p>
-              <label htmlFor="name ">Book Name:</label>
+              <label htmlFor="name">Book Name:</label>
               <input
                 type="text"
                 id="name"
@@ -77,17 +77,6 @@ const EditBook = (props) => {
                 id="author"
                 name="author"
                 value={inputs.author || ""}
-                onChange={handleChange}
-                required
-              />
-            </p>
-            <p>
-              <label htmlFor="summary">Summary:</label>
-              <input
-                type="text"
-                id="summary"
-                name="summary"
-                value={inputs.summary || ""}
                 onChange={handleChange}
                 required
               />
@@ -114,28 +103,17 @@ const EditBook = (props) => {
                 required
               />
             </p>
-            <p>
-              <label htmlFor="expiration">Expiration:</label>
-              <input
-                type="text"
-                id="expiration"
-                name="expiration"
-                value={inputs.expiration || ""}
-                onChange={handleChange}
-                required
-              />
-            </p>
 
             <section className="columns">
-              <p id="image-section">
+              <p id="image-prev-section">
                 <img
-                  id="image"
+                  id="image-prev"
                   src={
-                    inputs.image != null
-                      ? URL.createObjectURL(inputs.image)
-                      : inputs.image != null
-                      ? `https://library-site-backend.onrender.com/images/bookcovers//${inputs.image}`
-                      : ""
+                        typeof inputs.image === "string"
+                        ? `https://library-site-backend.onrender.com/images/bookcovers/${inputs.image}`
+                        : inputs.image instanceof File
+                        ? URL.createObjectURL(inputs.image)
+                        :""
                   }
                   alt=""
                 />
