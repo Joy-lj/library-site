@@ -3,7 +3,6 @@ import React from "react";
 import {useState, useEffect } from "react";
 import axios from "axios";
 import Books from "./Books";
-import AddBook from "./AddBook";
 
 const BookSection = () => {
     const [books, setBooks] = useState([]);
@@ -12,7 +11,6 @@ const BookSection = () => {
         (async() => {
             const response = await axios.get(
                 "https://library-site-backend.onrender.com/api/books/"
-               // "http://localhost:3000/api/books/"
             );
             setBooks(response.data);
         })();

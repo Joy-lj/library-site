@@ -1,23 +1,13 @@
 import {Link} from "react-router-dom";
 import {useState} from "react";
 import "../css/Aside.css";
-import AddBook from "./AddBook";
 
 const LibraryAside = ({onLibraryChange}) => {
     const [menuOpen, setMenuOpen] = useState(false);
-    const [showAddDialog, setShowAddDialog] = useState(false);
 
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
-    };
-
-    const openAddDialog = () => {
-        setShowAddDialog(true);
-    };
-
-    const closeAddDialog = () => {
-        setShowAddDialog(false);
     };
 
     return (
@@ -40,12 +30,6 @@ const LibraryAside = ({onLibraryChange}) => {
                 <h4><Link to="/library" onClick={() => onLibraryChange("Expired")}>Expired</Link></h4>
             </nav>
             <button><Link to="/returnbook">Return Book Here</Link></button>
-
-            <button id="add-book" onClick={openAddDialog}>Add Book</button>
-            {showAddDialog ? (
-                <AddBook closeDialog={closeAddDialog} />
-
-            ):("")}
 
         </aside>
         </>

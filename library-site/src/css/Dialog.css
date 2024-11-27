@@ -8,12 +8,23 @@
   padding:10px;
   color:var(--text);
   width:330px;
+  display:block;
 }
 
-#add-dialog,
-#edit-dialog,
+#edit-dialog {
+  display:block;
+  background:var(--infobackground);
+  border-radius:10px;
+  padding:10px;
+  color:var(--text);
+}
+
 #delete-dialog {
-  display: block;
+  display:block;
+  background:var(--infobackground);
+  border-radius:10px;
+  padding:10px;
+  color:var(--text);
 }
 
 #delete-content {

@@ -82,6 +82,17 @@ const EditBook = (props) => {
               />
             </p>
             <p>
+              <label htmlFor="summary">Summary:</label>
+              <input
+                type="text"
+                id="summary"
+                name="summary"
+                value={inputs.summary || ""}
+                onChange={handleChange}
+                required
+              />
+            </p>
+            <p>
               <label htmlFor="availability">Availability:</label>
               <input
                 type="text"
@@ -99,6 +110,17 @@ const EditBook = (props) => {
                 id="cite"
                 name="cite"
                 value={inputs.cite || ""}
+                onChange={handleChange}
+                required
+              />
+            </p>
+            <p>
+              <label htmlFor="expiration">Expiration:</label>
+              <input
+                type="text"
+                id="expiration"
+                name="expiration"
+                value={inputs.expiration || ""}
                 onChange={handleChange}
                 required
               />
