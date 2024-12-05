@@ -41,7 +41,7 @@ const AdminBooks = (props) => {
                     closeDialog={closeDeleteDialog}
                     hideBook = {hideBook}
                     name={book.name}
-                    id={book.id}
+                    _id={book._id}
                     />
                 ) : (
                  ""
@@ -51,7 +51,7 @@ const AdminBooks = (props) => {
                 <EditBook
                 closeDialog={closeEditDialog}
                 updateBook = {editBook}
-                id={book.id}
+                _id={book._id}
                 name={book.name}
                 author={book.author}
                 image={book.image}

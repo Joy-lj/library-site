@@ -6,17 +6,17 @@ import {Link, useParams} from "react-router-dom";
 
 
 const BookDescription = () => {
-    const { id } = useParams();
+    const { _id } = useParams();
     const [book, setBook] = useState(null);
 
     useEffect(() => {
         const fetchBook = async () => {
             const response = await axios.get("https://library-site-backend.onrender.com/api/books");
-            const selectedBook = response.data.find((item) => item.id === parseInt(id));
+            const selectedBook = response.data.find((item) => item._id === parseInt(_id));
             setBook(selectedBook);
         };
         fetchBook();
-    }, [id]);
+    }, [_id]);
 
     if (!book) {
         return <p>Loading...</p>;

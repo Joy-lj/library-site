@@ -22,8 +22,8 @@ const BookSection = () => {
                 <div id="book-div" className="book-container" >
                     {books.map((book)=>(
                     <Books
-                    key={book.id}
-                    id={book.id}
+                    key={book._id}
+                    _id={book._id}
                     name={book.name} 
                     author={book.author}
                     image={book.image}

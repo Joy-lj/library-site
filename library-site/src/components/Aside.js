@@ -1,8 +1,6 @@
 import {Link} from "react-router-dom";
 import "../css/Aside.css";
 import {useState, useEffect} from 'react';
-import AddBook from "./AddBook";
-import axios from "axios";
 
 
 const Aside = ({ onGenreChange }) => {

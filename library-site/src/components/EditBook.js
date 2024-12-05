@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 const EditBook = (props) => {
   const [inputs, setInputs] = useState({
-    id: props.id,
+    _id: props._id,
     name: props.name,
     author: props.author,
     summary: props.summary,
@@ -32,7 +32,7 @@ const EditBook = (props) => {
 
     const formData = new FormData(event.target);
     console.log(...formData);
-    const response = await fetch(`https://library-site-backend.onrender.com/api/books/${props.id}`,{
+    const response = await fetch(`https://library-site-backend.onrender.com/api/books/${props._id}`,{
       method:"PUT",
       body:formData
     });

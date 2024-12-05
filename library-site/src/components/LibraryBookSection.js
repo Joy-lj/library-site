@@ -20,7 +20,7 @@ const LibraryBookSection = () => {
         <div id="book-div" className="book-container" >
             {librarybooks.map((librarybook)=>(
                 <LibraryBooks
-                key={librarybook.id}
+                key={librarybook._id}
                 name={librarybook.name} 
                 author={librarybook.author}
                 image={librarybook.image}
