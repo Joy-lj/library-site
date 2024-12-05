@@ -58,7 +58,7 @@ const AddBook = (props) => {
             </p>
             <p>
               <label htmlFor="summary">Book Summary:</label>
-              <input type="text" id="summary" name="summary" required value={inputs.summary || ""} onChange={handleChange}/>
+              <textarea type="text" id="summary" name="summary" required value={inputs.summary || ""} onChange={handleChange}/>
             </p>
             <p>
               <label htmlFor="themes">Book Themes:</label>
