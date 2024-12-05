@@ -8,7 +8,7 @@ const AddBook = (props) => {
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
-    setInputs((values)=>({...values,[name]:value}));
+    setInputs((values)=>({...values,[name]: name === "themes" ? value : values[name] || ""}));
   };
 
   const handleImageChange = (event) => {
@@ -61,7 +61,7 @@ const AddBook = (props) => {
               <textarea type="text" id="summary" name="summary" required value={inputs.summary || ""} onChange={handleChange}/>
             </p>
             <p>
-              <label htmlFor="themes">Book Themes:</label>
+              <label htmlFor="themes">Book Themes (comma seperated):</label>
               <input type="text" id="themes" name="themes" required value={inputs.themes || ""} onChange={handleChange}/>
             </p>
             <p>
