@@ -7,6 +7,7 @@ const EditBook = (props) => {
     name: props.name,
     author: props.author,
     summary: props.summary,
+    themes: props.themes,
     availability: props.availability,
     cite: props.cite,
     expiration: props.expiration,
@@ -88,6 +89,18 @@ const EditBook = (props) => {
                 id="summary"
                 name="summary"
                 value={inputs.summary || ""}
+                onChange={handleChange}
+                required
+              />
+            </p>
+            <p>
+              <label htmlFor="themes">Themes:</label>
+              <input
+                type="text"
+                id="themes"
+                name="themes"
+                alt="optional"
+                value={inputs.themes || ""}
                 onChange={handleChange}
                 required
               />

@@ -56,6 +56,7 @@ const AdminBooks = (props) => {
                 author={book.author}
                 image={book.image}
                 summary={book.summary}
+                themes={book.themes}
                 availability={book.availability}
                 cite={book.cite}
                 expiration={book.expiration}
