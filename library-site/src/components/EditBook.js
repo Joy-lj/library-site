@@ -84,7 +84,7 @@ const EditBook = (props) => {
             </p>
             <p>
               <label htmlFor="summary">Summary:</label>
-              <input
+              <textarea
                 type="text"
                 id="summary"
                 name="summary"
@@ -94,12 +94,11 @@ const EditBook = (props) => {
               />
             </p>
             <p>
-              <label htmlFor="themes">Themes:</label>
+              <label htmlFor="themes">Themes (comma seperated):</label>
               <input
                 type="text"
                 id="themes"
                 name="themes"
-                alt="optional"
                 value={inputs.themes || ""}
                 onChange={handleChange}
                 required

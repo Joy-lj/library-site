@@ -60,13 +60,16 @@ const Admin = () => {
                     <div id="book-div" className="book-container">
                         {books.map((book)=>(
                         <AdminBooks 
-                        key={book.id}
-                        id={book.id}
+                        key={book._id}
+                        _id={book._id}
                         name={book.name} 
                         author={book.author}
                         image={book.image}
                         cite={book.cite}
                         availability={book.availability}
+                        expiration={book.expiration}
+                        themes={book.themes}
+                        summary={book.summary}
                         />
                         ))}
                     </div>
