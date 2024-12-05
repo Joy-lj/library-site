@@ -61,6 +61,10 @@ const AddBook = (props) => {
               <input type="text" id="summary" name="summary" required value={inputs.summary || ""} onChange={handleChange}/>
             </p>
             <p>
+              <label htmlFor="themes">Book Themes:</label>
+              <input type="text" id="themes" name="themes" required value={inputs.themes || ""} onChange={handleChange}/>
+            </p>
+            <p>
               <label htmlFor="availability">Book Availability:</label>
               <input type="text" id="availability" name="availability" required value={inputs.availability || ""} onChange={handleChange}/>
             </p>
