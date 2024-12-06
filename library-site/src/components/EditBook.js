@@ -18,7 +18,7 @@ const EditBook = (props) => {
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
-    setInputs((values) => ({ ...values, [name]: value }));
+    setInputs((values) => ({...values, [name]: name === "themes" ? value.split(",").map((item) => item.trim()) : value}));
   };
 
   const handleImageChange = (event) => {
@@ -99,7 +99,7 @@ const EditBook = (props) => {
                 type="text"
                 id="themes"
                 name="themes"
-                value={inputs.themes || ""}
+                value={inputs.themes ? inputs.themes.join(", ") : ""}
                 onChange={handleChange}
                 required
               />

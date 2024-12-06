@@ -1,4 +1,5 @@
 import React from "react";
+import "../css/BookSummary.css";
 
 const BookSummary = ({ name, author, summary, themes, availability }) => {
     return (

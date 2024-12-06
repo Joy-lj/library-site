@@ -30,7 +30,7 @@ const DeleteBook = (props) => {
             &times;
           </span>
           <div id="delete-content">
-            <h3>Are you sure you want to delete the {props.name}</h3>
+            <h3>Are you sure you want to delete {props.name}</h3>
             <section>
               <button onClick={props.closeDialog}>No</button>            
               <button onClick={deleteBook}>Yes</button>
